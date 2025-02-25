@@ -1,157 +1,97 @@
-/* ===== Base Styles & Variables ===== */
+/* styles.css - Earthy Industrial Theme */
 :root {
-  --primary-color: #2E5E4E;    /* Earthy green */
-  --secondary-color: #88B04B;  /* Fresh green */
-  --accent-color: #FF6F61;     /* Coral accent */
-  --light-bg: #F9F9F9;
-  --dark-text: #2C3E50;
-  --transition: all 0.3s ease;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    --primary-dark: #2A2D34;       /* Charcoal */
+    --accent-orange: #D96C06;      /* Rust Orange */
+    --earth-brown: #6B4D3F;        /* Clay Brown */
+    --steel-blue: #5C7A8C;         /* Industrial Blue */
+    --concrete-light: #E8E9EB;     /* Light Concrete */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  line-height: 1.6;
-  color: var(--dark-text);
-  background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--primary-dark);
+    line-height: 1.6;
 }
 
-/* ===== Responsive Images ===== */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ===== Header & Navigation ===== */
+/* Header Styles */
 header {
-  background-color: var(--primary-color);
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: var(--primary-dark);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 2rem;
-  margin-top: 1rem;
+.logo {
+    height: 60px;
+    width: auto;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: var(--transition);
-}
-
-/* ===== Hero Section ===== */
+/* Hero Section */
 .hero {
-  background: linear-gradient(rgba(46, 94, 78, 0.9), rgba(46, 94, 78, 0.8)),
-              url('images/nature-bg.jpg') center/cover;
-  color: white;
-  text-align: center;
-  padding: 4rem 1rem;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background: linear-gradient(rgba(42,45,52,0.85), rgba(42,45,52,0.85)),
+                url('images/hero-construction.jpg') center/cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
 }
 
-/* ===== Services Section ===== */
-.services {
-  padding: 4rem 1rem;
-  background-color: var(--light-bg);
+.hero h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background: var(--concrete-light);
 }
 
 .service-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: var(--transition);
-}
-
-/* ===== Buttons & Interactions ===== */
-.cta-button {
-  display: inline-block;
-  background-color: var(--accent-color);
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-/* ===== Footer Styles ===== */
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-/* ===== Mobile Responsive ===== */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
     text-align: center;
-    gap: 1rem;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: var(--transition);
 }
 
-/* ===== Print Styles ===== */
-@media print {
-  nav {
-    display: none;
-  }
-  
-  .hero {
-    background: none;
-    color: var(--dark-text);
-    padding: 1rem;
-  }
-  
-  .cta-button {
-    display: none;
-  }
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* ===== Accessibility ===== */
-.skip-link:focus {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: white;
-  padding: 0.5rem;
-  z-index: 1000;
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--accent-orange);
+    margin-bottom: 1rem;
+    background: var(--concrete-light);
+    padding: 1.5rem;
+    border-radius: 50%;
 }
 
-/* ===== Utility Classes ===== */
-/* Add these as needed for future expansion */
-.text-center { text-align: center; }
-.mt-1 { margin-top: 1rem; }
-.p-2 { padding: 2rem; }
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background: var(--accent-orange);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: var(--earth-brown);
+    transform: scale(1.05);
+}
