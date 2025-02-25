@@ -3,31 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binaterra - Home</title>
+    <meta name="description" content="Binaterra - Your trusted partner for professional services and sustainable solutions. Excellence in consulting, project management, and environmental services.">
+    <meta name="keywords" content="consulting, sustainability, project management, professional services">
+    <meta name="author" content="Binaterra Team">
+    <title>Binaterra - Home | Sustainable Solutions & Professional Services</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
-    <header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header role="banner">
         <h1>Welcome to Binaterra</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h2>Your Trusted Partner for Excellence</h2>
-        <p>Providing top-notch services with professionalism and dedication.</p>
-    </section>
-    <section class="services">
-        <h2>Our Services</h2>
-        <p>Explore the range of services we offer to meet your needs.</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Binaterra. All Rights Reserved.</p>
+
+    <main id="main-content" role="main">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h2 id="hero-heading">Your Trusted Partner for Sustainable Excellence</h2>
+                <p>Providing top-notch professional services with commitment to sustainability and innovation.</p>
+                <a href="contact.html" class="cta-button">Get Started Today</a>
+            </div>
+        </section>
+
+        <section class="services" aria-labelledby="services-heading">
+            <h2 id="services-heading">Our Core Services</h2>
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3>Consulting Services</h3>
+                    <p>Strategic solutions for sustainable business growth</p>
+                </article>
+                <article class="service-card">
+                    <h3>Project Management</h3>
+                    <p>End-to-end management of complex initiatives</p>
+                </article>
+                <article class="service-card">
+                    <h3>Environmental Solutions</h3>
+                    <p>Eco-friendly strategies for modern businesses</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2025 Binaterra. All Rights Reserved.</p>
+            <address>
+                Contact us at <a href="mailto:info@binaterra.com">info@binaterra.com</a><br>
+                123 Sustainable Way, Eco City, EC1 1AB
+            </address>
+        </div>
+        <div itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="Binaterra">
+            <meta itemprop="url" content="https://www.binaterra.com">
+        </div>
     </footer>
 </body>
 </html>
