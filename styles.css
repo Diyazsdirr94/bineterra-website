@@ -1,97 +1,43 @@
-/* styles.css - Earthy Industrial Theme */
+/* styles.css - Multi-Service Theme */
 :root {
-    --primary-dark: #2A2D34;       /* Charcoal */
-    --accent-orange: #D96C06;      /* Rust Orange */
-    --earth-brown: #6B4D3F;        /* Clay Brown */
-    --steel-blue: #5C7A8C;         /* Industrial Blue */
-    --concrete-light: #E8E9EB;     /* Light Concrete */
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Core Brand Colors */
+    --primary-dark: #2A2D34;
+    --accent-orange: #D96C06;
+    
+    /* Service Category Colors */
+    --property-color: #8B572A;    /* Real Estate Brown */
+    --home-service-color: #417505; /* Maintenance Green */
+    --vehicle-color: #2F3438;      /* Automotive Steel */
+    --product-color: #B71C1C;      /* Retail Red */
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: var(--primary-dark);
-    line-height: 1.6;
+.service-category {
+    padding: 1rem;
+    border-left: 4px solid var(--primary-dark);
 }
 
-/* Header Styles */
-header {
-    background: var(--primary-dark);
-    padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.logo {
-    height: 60px;
-    width: auto;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(42,45,52,0.85), rgba(42,45,52,0.85)),
-                url('images/hero-construction.jpg') center/cover;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-.hero h1 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1.5rem;
-}
-
-/* Services Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 4rem 2rem;
-    background: var(--concrete-light);
-}
+.property-services { border-color: var(--property-color); }
+.home-services { border-color: var(--home-service-color); }
+.vehicle-services { border-color: var(--vehicle-color); }
+.product-services { border-color: var(--product-color); }
 
 .service-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 4px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+.service-card:hover .service-overlay {
+    opacity: 1;
 }
 
-.service-card i {
-    font-size: 2.5rem;
-    color: var(--accent-orange);
-    margin-bottom: 1rem;
-    background: var(--concrete-light);
-    padding: 1.5rem;
-    border-radius: 50%;
-}
-
-/* CTA Button */
-.cta-button {
-    display: inline-block;
-    background: var(--accent-orange);
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(42,45,52,0.9);
     color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: var(--transition);
-}
-
-.cta-button:hover {
-    background: var(--earth-brown);
-    transform: scale(1.05);
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
