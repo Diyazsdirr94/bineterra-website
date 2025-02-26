@@ -1,58 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binaterra - Civil Construction Specialists</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <img src="images/logo.png" alt="Binaterra Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="safety.html">Safety</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Building Tomorrow's Infrastructure</h1>
-            <p>Experts in road construction, civil engineering, and industrial development</p>
-            <a href="#contact" class="cta-button">Request Consultation</a>
-        </div>
-    </section>
-
-    <section class="services">
-        <h2>Our Core Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-road"></i>
-                <h3>Road Construction</h3>
-                <p>Modern highway and urban road development</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-bridge"></i>
-                <h3>Bridge Engineering</h3>
-                <p>Structural design and construction</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-truck-pickup"></i>
-                <h3>Earthworks</h3>
-                <p>Excavation and land development</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Additional sections would go here -->
-</body>
-</html>
+<!-- Update the navigation in your header -->
+<header>
+    <div class="header-container">
+        <img src="images/logo.png" alt="Binaterra Logo" class="logo">
+        <nav class="mega-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="mega-dropdown">
+                    <a href="#">Services ▾</a>
+                    <div class="mega-content">
+                        <div class="service-category">
+                            <h4>Property Solutions</h4>
+                            <a href="property-buy.html">Buy Property</a>
+                            <a href="property-rent.html">Rent Properties</a>
+                            <a href="property-management.html">Management</a>
+                        </div>
+                        <div class="service-category">
+                            <h4>Home Services</h4>
+                            <a href="plumbing.html">Plumbing</a>
+                            <a href="electrical.html">Electrical</a>
+                            <a href="cleaning.html">Professional Cleaning</a>
+                        </div>
+                        <div class="service-category">
+                            <h4>Vehicle Solutions</h4>
+                            <a href="car-sales.html">Car Sales</a>
+                            <a href="bike-rental.html">Bike Rental</a>
+                            <a href="vehicle-service.html">Servicing</a>
+                        </div>
+                        <div class="service-category">
+                            <h4>Products</h4>
+                            <a href="coway-products.html">Coway Products</a>
+                            <a href="home-appliances.html">Home Appliances</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
