@@ -1,41 +1,165 @@
-<!-- Update the navigation in your header -->
-<header>
-    <div class="header-container">
-        <img src="images/logo.png" alt="Binaterra Logo" class="logo">
-        <nav class="mega-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="mega-dropdown">
-                    <a href="#">Services ▾</a>
-                    <div class="mega-content">
-                        <div class="service-category">
-                            <h4>Property Solutions</h4>
-                            <a href="property-buy.html">Buy Property</a>
-                            <a href="property-rent.html">Rent Properties</a>
-                            <a href="property-management.html">Management</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binaterra - Comprehensive Infrastructure Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Binaterra Logo" class="logo">
+            <nav class="mega-menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                    <li class="mega-dropdown">
+                        <a href="#services">Services ▾</a>
+                        <div class="mega-content">
+                            <div class="service-category construction-services">
+                                <h4>Construction</h4>
+                                <a href="road-construction.html"><i class="fas fa-road"></i>Road Construction</a>
+                                <a href="bridge-engineering.html"><i class="fas fa-bridge"></i>Bridge Engineering</a>
+                                <a href="earthworks.html"><i class="fas fa-truck-pickup"></i>Earthworks</a>
+                            </div>
+                            <div class="service-category property-services">
+                                <h4>Property</h4>
+                                <a href="property-management.html"><i class="fas fa-building"></i>Management</a>
+                                <a href="property-sales.html"><i class="fas fa-home"></i>Buy/Sell</a>
+                                <a href="property-rental.html"><i class="fas fa-key"></i>Rental</a>
+                            </div>
+                            <div class="service-category vehicle-services">
+                                <h4>Vehicles</h4>
+                                <a href="car-sales.html"><i class="fas fa-car"></i>Car Sales</a>
+                                <a href="bike-rental.html"><i class="fas fa-motorcycle"></i>Bike Rental</a>
+                                <a href="vehicle-servicing.html"><i class="fas fa-tools"></i>Servicing</a>
+                            </div>
                         </div>
-                        <div class="service-category">
-                            <h4>Home Services</h4>
-                            <a href="plumbing.html">Plumbing</a>
-                            <a href="electrical.html">Electrical</a>
-                            <a href="cleaning.html">Professional Cleaning</a>
-                        </div>
-                        <div class="service-category">
-                            <h4>Vehicle Solutions</h4>
-                            <a href="car-sales.html">Car Sales</a>
-                            <a href="bike-rental.html">Bike Rental</a>
-                            <a href="vehicle-service.html">Servicing</a>
-                        </div>
-                        <div class="service-category">
-                            <h4>Products</h4>
-                            <a href="coway-products.html">Coway Products</a>
-                            <a href="home-appliances.html">Home Appliances</a>
-                        </div>
+                    </li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Integrated Infrastructure Solutions</h1>
+                <p>From construction to property management - Your complete urban development partner</p>
+                <div class="cta-group">
+                    <a href="#contact" class="cta-button">Request Consultation</a>
+                    <a href="services.html" class="cta-button secondary">Explore Services</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-hub">
+            <h2>Our Service Divisions</h2>
+            <div class="hub-grid">
+                <article class="hub-card construction">
+                    <img src="images/construction-hub.jpg" alt="Construction Services">
+                    <div class="hub-content">
+                        <h3>Construction & Engineering</h3>
+                        <ul>
+                            <li>Road & Bridge Construction</li>
+                            <li>Earthworks & Land Development</li>
+                            <li>Industrial Facilities</li>
+                        </ul>
                     </div>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+                </article>
+
+                <article class="hub-card property">
+                    <img src="images/property-hub.jpg" alt="Property Services">
+                    <div class="hub-content">
+                        <h3>Property Solutions</h3>
+                        <ul>
+                            <li>Residential & Commercial Sales</li>
+                            <li>Property Management</li>
+                            <li>Rental Services</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="hub-card home-services">
+                    <img src="images/home-hub.jpg" alt="Home Services">
+                    <div class="hub-content">
+                        <h3>Home Services</h3>
+                        <ul>
+                            <li>Plumbing & Electrical</li>
+                            <li>AC Maintenance</li>
+                            <li>Smart Home Installations</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="unified-features">
+            <h2>Why Choose Binaterra?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Certified Professionals</h3>
+                    <p>All services provided by licensed and verified experts</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Integrated Solutions</h3>
+                    <p>One platform for all infrastructure needs</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer service</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="master-footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="construction.html">Construction</a></li>
+                    <li><a href="property.html">Property</a></li>
+                    <li><a href="vehicles.html">Vehicles</a></li>
+                    <li><a href="home-services.html">Home Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="sustainability.html">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <address>
+                    24 Jalan Teknokrat 5<br>
+                    Cyberjaya, Selangor<br>
+                    <a href="tel:+60312345678">+603 1234 5678</a><br>
+                    <a href="mailto:info@binaterra.com">info@binaterra.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Binaterra. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
