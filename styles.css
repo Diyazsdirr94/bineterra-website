@@ -1,43 +1,184 @@
-/* styles.css - Multi-Service Theme */
+/* styles.css - Industrial Minimalist Theme */
 :root {
-    /* Core Brand Colors */
-    --primary-dark: #2A2D34;
-    --accent-orange: #D96C06;
-    
-    /* Service Category Colors */
-    --property-color: #8B572A;    /* Real Estate Brown */
-    --home-service-color: #417505; /* Maintenance Green */
-    --vehicle-color: #2F3438;      /* Automotive Steel */
-    --product-color: #B71C1C;      /* Retail Red */
+  /* Industrial Color Palette */
+  --steel-dark: #2D3033;
+  --rust-accent: #C45C1A;
+  --concrete: #E8E8E8;
+  --metal-grey: #5D6970;
+  --safety-yellow: #FFD700;
+  --whatsapp-green: #25D366;
+  
+  /* Typography */
+  --title-font: 'Roboto Condensed', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
 }
 
-.service-category {
-    padding: 1rem;
-    border-left: 4px solid var(--primary-dark);
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.property-services { border-color: var(--property-color); }
-.home-services { border-color: var(--home-service-color); }
-.vehicle-services { border-color: var(--vehicle-color); }
-.product-services { border-color: var(--product-color); }
+body {
+  font-family: var(--body-font);
+  background-color: var(--concrete);
+  color: var(--steel-dark);
+  line-height: 1.6;
+}
+
+/* Industrial Header */
+header {
+  background: var(--steel-dark);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  filter: grayscale(100%) brightness(150%);
+}
+
+/* Minimalist Navigation */
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--rust-accent);
+  border-bottom: 2px solid var(--rust-accent);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(45, 48, 51, 0.9), rgba(45, 48, 51, 0.9)),
+              url('images/industrial-bg.jpg') center/cover;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: var(--title-font);
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .service-card {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+  background: white;
+  padding: 2rem;
+  border: 2px solid var(--metal-grey);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.service-card:hover .service-overlay {
-    opacity: 1;
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--rust-accent);
 }
 
-.service-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(42,45,52,0.9);
-    color: white;
-    padding: 1rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.service-card i {
+  font-size: 2.5rem;
+  color: var(--rust-accent);
+  margin-bottom: 1rem;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--whatsapp-green);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float i {
+  font-size: 2rem;
+}
+
+/* Industrial Typography */
+h1, h2, h3 {
+  font-family: var(--title-font);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 4rem 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .whatsapp-float {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
 }
