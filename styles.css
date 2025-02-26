@@ -46,6 +46,7 @@ nav ul {
   justify-content: flex-end;
   list-style: none;
   gap: 2rem;
+  position: relative;
 }
 
 nav a {
@@ -61,6 +62,39 @@ nav a {
 nav a:hover {
   color: var(--rust-accent);
   border-bottom: 2px solid var(--rust-accent);
+}
+
+/* Dropdown Menu Styling */
+.mega-dropdown {
+  position: relative;
+}
+
+.mega-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--steel-dark);
+  padding: 1rem;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mega-content a {
+  display: block;
+  color: var(--concrete);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.mega-content a:hover {
+  background: var(--rust-accent);
+  color: white;
+}
+
+.mega-dropdown:hover .mega-content {
+  display: block;
 }
 
 /* Hero Section */
