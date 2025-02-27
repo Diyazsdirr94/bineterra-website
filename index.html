@@ -7,60 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        .mega-dropdown {
-            position: relative;
-        }
-        .mega-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 300px;
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            padding: 15px;
-        }
-        .mega-dropdown:hover .mega-content {
-            display: block;
-        }
-        .service-category {
-            margin-bottom: 10px;
-        }
-        .service-category h4 {
-            margin-bottom: 5px;
-        }
-        .business-details {
-            background: var(--steel-dark);
-            color: white;
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            border-top: 3px solid var(--rust-accent);
-        }
-        .detail-card {
-            text-align: center;
-            padding: 1rem;
-        }
-        .detail-card i {
-            font-size: 2rem;
-            color: var(--rust-accent);
-            margin-bottom: 1rem;
-        }
-        .certification-badge {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-        .badge-icon {
-            width: 60px;
-            height: 60px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -104,11 +50,16 @@
     </header>
 
     <main id="main-content">
+        <h1>Welcome to Binaterra</h1>
+        <p>Your trusted partner in infrastructure solutions.</p>
+    </main>
+
+    <footer>
         <section class="business-details">
             <div class="detail-card">
                 <i class="fas fa-map-marker-alt"></i>
                 <h3>Headquarters</h3>
-                <p>Kuching, Sarawak</p>
+                <p>24 Jalan Teknokrat 5<br>Cyberjaya, Selangor</p>
             </div>
             <div class="detail-card">
                 <i class="fas fa-clock"></i>
@@ -129,23 +80,23 @@
         <a href="https://wa.me/60122705213" class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp" title="Chat with us on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-    </main>
-    <section class="emergency-banner">
-        <div class="emergency-content">
-            <i class="fas fa-exclamation-triangle"></i>
-            <div>
-                <h3>24/7 Emergency Services</h3>
-                <p>Call our emergency hotline: <a href="tel:+60312348888">+603 1234 8888</a></p>
+        <section class="emergency-banner">
+            <div class="emergency-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <h3>24/7 Emergency Services</h3>
+                    <p>Call our emergency hotline: <a href="tel:+60312348888">+603 1234 8888</a></p>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="client-logos">
-        <h3>Trusted By</h3>
-        <div class="logos-grid">
-            <img src="images/mbjb-logo.png" alt="MBJB">
-            <img src="images/sime-darby.png" alt="Sime Darby">
-            <img src="images/gamuda.png" alt="Gamuda">
-        </div>
-    </section>
+        </section>
+        <section class="client-logos">
+            <h3>Trusted By</h3>
+            <div class="logos-grid">
+                <img src="images/mbjb-logo.png" alt="MBJB">
+                <img src="images/sime-darby.png" alt="Sime Darby">
+                <img src="images/gamuda.png" alt="Gamuda">
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
