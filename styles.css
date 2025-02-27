@@ -204,28 +204,33 @@ nav a:hover {
 
 /* Client Logos */
 .client-logos {
-    padding: 2rem;
-    background: var(--concrete);
     text-align: center;
+    margin: 50px 0;
+}
+
+.client-logos h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .logos-grid {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between logos */
 }
 
 .logos-grid img {
-    height: 40px;
-    width: auto;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%); /* Optional: Makes logos black & white */
+    transition: filter 0.3s ease-in-out;
 }
 
 .logos-grid img:hover {
-    opacity: 1;
+    filter: grayscale(0%); /* Shows color on hover */
 }
 
 /* Industrial Typography */
