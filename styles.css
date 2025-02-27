@@ -87,7 +87,14 @@ nav a:hover {
   text-decoration: none;
   transition: background 0.3s ease, color 0.3s ease;
 }
-
+.mega-content .service-category h4 {
+    color: white; /* Ensures visibility */
+    font-weight: bold;
+    padding: 8px 12px;
+    margin-top: 10px;
+    display: block;
+    background-color: var(--metal-grey); /* Adjust for contrast */
+}
 .mega-content a:hover {
   background: var(--rust-accent);
   color: white;
